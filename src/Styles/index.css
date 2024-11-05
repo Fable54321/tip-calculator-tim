@@ -50,6 +50,7 @@ p {
   display: flex;
   justify-content: space-between;
   padding: 2rem;
+  box-shadow: 0px 3px 5px 0px hsl(185, 20%, 61%);
 }
 @media (max-width: 50em) {
   .main__container {
@@ -59,6 +60,7 @@ p {
     width: clamp(300px, 99vw, 600px);
     height: 789px;
     padding: 1.5rem;
+    box-shadow: none;
   }
 }
 
