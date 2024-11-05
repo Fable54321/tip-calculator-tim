@@ -57,13 +57,13 @@ const FormPanel = (myProps) => {
 
 
 useEffect(() => {
-  if(myProps.numOfPeople > 0){ 
+  if(myProps.numOfPeople > 0 || myProps.numOfPeople === null){ 
     myProps.setValid(true)
-  }else {
+  }if(myProps.numOfPeople === 0) {
     myProps.setValid(false)
   }
 // eslint-disable-next-line react-hooks/exhaustive-deps
-},[myProps.numOfPeople])
+},[myProps.numOfPeople, myProps])
   
 
 
@@ -157,8 +157,8 @@ useEffect(() => {
               min={1}
               max={20}
               value={myProps.numOfPeople}
-              onChange={(e) => myProps.setNumOfPeople(e.target.value)}
-
+              onChange={(e) => e.target.value.length < 3 && myProps.setNumOfPeople(e.target.value)}
+              onClick={() => myProps.setNumOfPeople(0)}
             />
             <p style={{display: myProps.valid ? "none":"block"}}>Can&apos;t be zero</p>
           </div>

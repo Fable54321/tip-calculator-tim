@@ -7,7 +7,7 @@ const Container = () => {
     const [bill, setBill] = useState(null);
     const [finalPercentage, setFinalPercentage] = useState(0);
     const [customTip, setCustomTip] = useState(null);
-    const [numOfPeople, setNumOfPeople] = useState(1);
+    const [numOfPeople, setNumOfPeople] = useState(null);
     const [tipAmount, setTipAmount] = useState(0);
     const [total, setTotal] = useState(0);
     const [valid, setValid] = useState(false);

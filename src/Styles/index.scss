@@ -20,7 +20,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: $sz-550;
-    margin-bottom: 65px;
+    margin-bottom: 75px;
 
     @media(max-width: $query-trigger){
         gap: $sz-250;
