@@ -20,14 +20,16 @@ body {
     align-items: center;
     justify-content: center;
     gap: $sz-550;
+    margin-bottom: 65px;
 
     @media(max-width: $query-trigger){
         gap: $sz-250;
         margin-top: $sz-312;
-    }
+        margin-bottom: 0;
+
 }
 
-
+}
 
 input[type=number] {
     -moz-appearance: textfield;
