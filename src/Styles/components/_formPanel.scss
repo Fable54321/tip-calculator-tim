@@ -1,0 +1,142 @@
+@use '../abstracts/mixins' as m;
+@use '../abstracts/variables' as *;
+
+.main__form-panel {
+   width: 50%;
+
+   @media(max-width: $query-trigger){
+    width: 100%;
+ 
+   }
+
+    &__form {
+        padding: $sz-80 $sz-90;
+
+        
+        & *{
+            width: 100%;
+        }
+
+        &__bill {
+
+            label {
+                    @include m.label;
+                }
+            
+                input {
+                    @include m.form-all;
+                    @include m.form-input;
+                    background-image: url('../images/icon-dollar.svg');
+                }
+            }
+            
+            &__tip-select {
+            
+                margin-top: $sz-250;
+            
+                h2 {
+                    @include m.label;
+                }
+            
+                &__grid {
+                    margin-top: $sz-100;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    column-gap: $sz-100;
+                    row-gap: $sz-90;
+
+                    @media(max-width: $query-trigger){
+                        grid-template-columns: 1fr 1fr;
+                    }
+            
+                    button {
+                        @include m.form-all;
+                        background-color: $clr-neutral-800;
+                        color: $clr-neutral-100;
+            
+                        &:hover {
+                            cursor: pointer;
+                            background-color: $clr-accent-cyan-hover ;
+                            color: $clr-neutral-800;
+                        }
+            
+                    }
+            
+                    .btn-active {
+                        background-color: $clr-accent-cyan;
+            
+                    }
+            
+            
+            
+                    input {
+                        @include m.form-all;
+                        @include m.form-input;
+                        padding-right: inherit;
+                        text-align: center;
+                        
+            
+                        &:hover {
+                            cursor: text;
+                        }
+            
+            
+                    }
+
+                    &__custom{
+                        position: relative;
+
+                        p{
+                            position: absolute;
+                            top:50%;
+                            left: 72%;
+                            transform: translateY(-50%);
+                            font-family: $ff-secondary;
+                            font-size: $fs-form;
+                            color: $clr-neutral-800;
+                            font-weight: $fw-secondary;
+                        }
+                    }
+            
+                }
+        }
+        &__num-of-people {
+
+            margin-top: $sz-250;
+
+            label {
+                @include m.label;
+            }
+
+            input {
+                margin-top: 6px;
+                @include m.form-all;
+                @include m.form-input;
+                background-image: url('../images/icon-person.svg');
+
+                &[data-type="error"]{
+                    outline: 2px solid $clr-accent-error;
+                    position: rea;
+
+                    
+                }
+            }
+
+            &__input {
+                position:relative;
+
+                p {
+                    position: absolute;
+                    top:-46%;
+                    left: 70%;
+                    font-family: $ff-secondary;
+                    font-size: $fs-info;
+                    font-weight: $fw-secondary;
+                    color: $clr-accent-error;
+                }
+            }
+        }
+    }
+}
+
+

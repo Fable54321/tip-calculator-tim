@@ -1,0 +1,51 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as m;
+
+
+.main__result-panel {
+    width: 50%;
+    background-color: $clr-neutral-800;
+    border-radius: 15px;
+    padding: $sz-250;
+    margin-left: $sz-200;
+
+    @media(max-width: $query-trigger){
+        width: 100%;
+        margin-left: 0;
+        padding: $sz-150;
+        margin-top: $sz-200;
+    }
+
+    &__total-tip {
+        
+        @include m.totals;
+       
+    }
+    &__total-person {
+       margin-top: $sz-160;
+
+       @include m.totals;
+
+       @media(max-width: $query-trigger){
+        margin-top: $sz-150;
+       }
+    }
+
+    button {
+        margin-top: $sz-762;
+        @include m.form-all;
+        width: 100%;
+        background-color: $clr-neutral-600;
+        color: $clr-neutral-800;
+
+        @media(max-width: $query-trigger){
+            margin-top: $sz-200;
+            background-color: $clr-accent-cyan;
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: $clr-accent-cyan-hover ;
+        }
+    }
+}
