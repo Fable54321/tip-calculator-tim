@@ -33,11 +33,11 @@ const ResultPanel = (myProps) => {
     <article className="main__result-panel">
       <div className="main__result-panel__total-tip">
         <h2>Tip Amount <br/> <span>/ person</span></h2>
-        <p>${myProps.tipAmount.toFixed(2)}</p>
+        <p>${myProps.tipAmount ? myProps.tipAmount: "0.00"}</p>
       </div>
       <div className="main__result-panel__total-person">
         <h2>Total <br/> <span>/ person</span></h2>
-        <p>${myProps.total ? myProps.total.toFixed(2): "0.00"}</p>
+        <p>${myProps.total ? myProps.total: "0.00"}</p>
       </div>
       <form>
       <button>RESET</button>

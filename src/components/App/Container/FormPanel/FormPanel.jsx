@@ -158,7 +158,7 @@ useEffect(() => {
               max={20}
               value={myProps.numOfPeople}
               onChange={(e) => e.target.value.length < 3 && myProps.setNumOfPeople(e.target.value)}
-              onClick={() => myProps.setNumOfPeople(0)}
+              onClick={() => myProps.setNumOfPeople(null)}
             />
             <p style={{display: myProps.valid ? "none":"block"}}>Can&apos;t be zero</p>
           </div>
